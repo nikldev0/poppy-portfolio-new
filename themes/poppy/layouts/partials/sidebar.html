@@ -4,6 +4,9 @@
             <!-- <h1>{{ .Site.Title }}</h1> -->
             <img src="./assets/logo.png" alt="Poppy">
         </a>
+        <a class="menu-toggle" id="open-menu">
+            Me
+         </a>
         <!-- Bio collapse -->
         <details>
             <summary>Me</summary>
@@ -11,22 +14,17 @@
             <p class="short-bio">{{ . }}</p>
             {{end}}
         </details>
-        <a class="menu-toggle" id="open-menu">
-            <details>
-                <summary>Me</summary>
-                {{ with .Site.Params.shortBio }}
-                <p class="short-bio">{{ . }}</p>
-                {{end}}
-            </details>
-        </a>
         {{ with .Site.Menus }}
         <hr>
         <ul class="menu-section">
             {{ range .main }}
             <li>
-                <a href="{{ .URL }}">
-                    <span> {{.Name}}</span>
-                </a>
+                {{ with .Site.Params.shortBio }}
+                <p class="short-bio">{{ . }}</p>
+                {{end}}
+            </li>
+            <li>
+                <p>Hello!</p>
             </li>
             {{end}}
         </ul>

@@ -270,6 +270,11 @@
     font-family: "Messapia-Bold", sans-serif;
   }
 
+  nav .menu-toggle {
+      margin-top: 0.8rem;
+  }
+
+
   nav img {
     max-width: 200px;
   }
