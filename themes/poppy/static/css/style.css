@@ -253,6 +253,10 @@
     margin-top: 1.3em;
     border-color: #333;
     border-style: solid;
+    display: none;
+  }
+  nav ul {
+    display: none;
   }
   nav li {
     line-height: 1.5em;
@@ -305,6 +309,7 @@
     padding: 0.5rem;
     margin-top: 1rem;
     font-size: 1rem;
+    display: none;
   }
 
   /*Text post stuff*/
@@ -410,6 +415,10 @@
     }
     nav #open-menu {
       display: none;
+    }
+
+    details {
+        display: block;
     }
   }
   @media only screen and (min-width: 750px) {
