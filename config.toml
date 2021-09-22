@@ -1,0 +1,6 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Poppy Portfolio"
+theme = "poppy"
+[params]
+    shortBio = "Ioana Popescu is a photographer and filmmaker from Bucharest."

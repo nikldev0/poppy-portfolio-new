@@ -1,0 +1,58 @@
+<!--<aside>-->
+    <nav>
+        <a href="/">
+            <!-- <h1>{{ .Site.Title }}</h1> -->
+            <img src="./assets/logo.png" alt="Poppy">
+        </a>
+        <!-- Bio collapse -->
+        <details>
+            <summary>Me</summary>
+            {{ with .Site.Params.shortBio }}
+            <p class="short-bio">{{ . }}</p>
+            {{end}}
+        </details>
+        <a class="menu-toggle" id="open-menu">
+            <details>
+                <summary>Me</summary>
+                {{ with .Site.Params.shortBio }}
+                <p class="short-bio">{{ . }}</p>
+                {{end}}
+            </details>
+        </a>
+        {{ with .Site.Menus }}
+        <hr>
+        <ul class="menu-section">
+            {{ range .main }}
+            <li>
+                <a href="{{ .URL }}">
+                    <span> {{.Name}}</span>
+                </a>
+            </li>
+            {{end}}
+        </ul>
+        {{ with .projects }}
+        <ul class="menu-section">
+            {{ range . }}
+            <li>
+                <a href="{{ .URL }}">
+                    <span> {{.Name}}</span>
+                </a>
+            </li>
+            {{end}}
+        </ul>
+        {{end}}
+        {{ with .socials }}
+        <ul class="menu-section">
+            {{ range . }}
+            <li>
+                <a href="{{ .URL }}">
+                    <span> {{.Name}}</span>
+                </a>
+            </li>
+        </ul>
+        {{end}}
+        {{end}}
+        {{end}}
+
+    </nav>
+    <!--</aside>-->
