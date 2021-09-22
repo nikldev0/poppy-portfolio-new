@@ -11,7 +11,8 @@ $(document).ready(function () {
 
     $(".menu-toggle").click(function () {
       if ($(".menu-toggle").attr("id") == "open-menu") {
-        $("nav ul, nav hr").css("display", "block");
+        $(".short-bio").css("display", "block");
+
 
         //Animate height increase of menu
         var curHeight = $("nav").css("height");
@@ -33,7 +34,7 @@ $(document).ready(function () {
           500,
           function () {
             // Hide the other elements of the menu when the animation is done
-            $("nav ul, nav hr").css("display", "none");
+            $(".short-bio").css("display", "none");
           }
         );
         $(".menu-toggle").attr("id", "open-menu");

@@ -266,7 +266,7 @@
   nav .menu-section {
     padding-bottom: 20px;
   }
-  nav .short-bio {
+  nav .short-bio, nav .details-bio {
     font-size: 0.85rem;
     line-height: 1.4;
     /* padding-right: 50px; */
@@ -344,6 +344,7 @@
   .container#text-post figure {
     margin-bottom: 20px;
   }
+
   /*Media queries*/
   @media only screen and (max-width: 619px) {
     nav {
@@ -381,7 +382,7 @@
       width: 95%;
       margin: 0 auto;
     }
-    nav .short-bio,
+    .short-bio,
     nav ul,
     nav hr {
       display: none;
@@ -399,7 +400,7 @@
     nav .short-bio,
     nav ul,
     nav hr {
-      display: block;
+      display: none;
     }
     nav .menu-toggle {
       display: none;
