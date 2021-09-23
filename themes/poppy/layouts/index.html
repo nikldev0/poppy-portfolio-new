@@ -2,8 +2,8 @@
 <div class="container photo-grid">
     {{ range (.Pages.ByParam "param_key") }}
     <article>
-        <img data-aos="fade-up"
-        data-aos-duration="1400" class="main-img" src="{{.Params.imgPostUrl}}" loading="lazy" alt="{{.Params.alt}}"><br>
+        <img data-aos="fade-up" data-aos-duration="1400" class="main-img" src="{{.Params.imgPostUrl}}" loading="lazy"
+            alt="{{.Params.alt}}"><br>
         <div class="img-description">
             <div class="img-description-content">
             </div>
@@ -12,7 +12,16 @@
     {{ end }}
 </div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../static/js/basicLightbox.min.js"></script>
 <script>
     AOS.init();
-  </script>
+
+    document.querySelector('.main-img').onclick = () => {
+
+basicLightbox.create(`
+    <img width="1400" height="900" src="https://placehold.it/1400x900">
+`).show()
+
+}
+</script>
 {{ end }}
